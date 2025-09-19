@@ -54,7 +54,7 @@ a {
 
 /* hero com Parallax */
 .parallax {
-  background: url("../img/1.png") no-repeat center center/cover;
+  background: url("../img/1_newbw.jpg") no-repeat center center/cover;
   height: 100vh;
   background-attachment: fixed;
   display: flex;
@@ -86,15 +86,44 @@ section {
 }
 
 .tattoos h2 {
-  padding: 0.75rem 0;
+  padding: 2rem 0;
   letter-spacing: 1px;
   font-size: 2rem;
 }
 
-.about h2 {
-  padding: 0.75rem 0;
-  letter-spacing: 1px;
-  font-size: 2rem;
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  flex-wrap: wrap; /* para responsividade */
+  text-align: left;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.about-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 500px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 6px;
 }
 
 .contact h2 {
@@ -107,6 +136,7 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+  transition: gap 0.25s ease;
 }
 
 @media (max-width: 900px) {
@@ -123,12 +153,33 @@ section {
 
 .gallery-item img {
   width: 100%;
+  display: block;
   border-radius: 6px;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  will-change: transform, filter;
 }
 
-.gallery-item img:hover {
-  transform: scale(1.05);
+/* Efeito de foco: ao passar o mouse na galeria, apenas o destaque cresce;
+   as demais não encolhem (evita gutter/folga entre itens). */
+.gallery:hover .gallery-item img {
+  transform: none;
+  filter: blur(3px) brightness(0.8);
+}
+
+/* A imagem sob o mouse cresce e fica por cima */
+.gallery .gallery-item {
+  position: relative;
+}
+
+.gallery:hover .gallery-item:hover img {
+  transform: scale(1.15);
+  position: relative;
+  z-index: 3;
+  filter: none;
+}
+
+.gallery:hover {
+  gap: 0;
 }
 
 footer {
