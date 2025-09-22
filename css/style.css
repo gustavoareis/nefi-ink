@@ -11,6 +11,14 @@ body {
   color: #fff;
 }
 
+@font-face {
+  font-family: "Cloister Black";
+  src: url("../fonts/CloisterBlack.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 a {
   color: inherit;
 }
@@ -66,7 +74,10 @@ a {
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
-  font-weight: 400;
+  font-family: "Cloister Black", "Poppins", "Helvetica Neue", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 60px;
+  color: rgb(255, 255, 255);
 }
 
 .btn {
@@ -98,7 +109,7 @@ section {
   align-items: center;
   gap: 3rem;
   padding: 4rem 2rem;
-  flex-wrap: wrap; /* para responsividade */
+  flex-wrap: wrap;
   text-align: left;
 }
 
@@ -160,14 +171,11 @@ section {
   will-change: transform, filter;
 }
 
-/* Efeito de foco: ao passar o mouse na galeria, apenas o destaque cresce;
-   as demais não encolhem (evita gutter/folga entre itens). */
 .gallery:hover .gallery-item img {
   transform: none;
   filter: blur(3px) brightness(0.8);
 }
 
-/* A imagem sob o mouse cresce e fica por cima */
 .gallery .gallery-item {
   position: relative;
 }
