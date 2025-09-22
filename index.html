@@ -15,8 +15,15 @@
     <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
   </head>
   <body>
-    <!-- Navbar -->
     <header class="navbar">
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+      <label for="menu-toggle" class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
       <nav class="nav-links">
         <ul>
           <li><a href="#home">Home</a></li>
@@ -25,6 +32,12 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
+      <a href="#home" class="logo">
+        <img src="img/favicon.png" alt="Logo Ramon Néfi" />
+      </a>
+      
+      <label for="menu-toggle" class="overlay"></label>
     </header>
 
     <section id="home" class="parallax">
@@ -34,36 +47,33 @@
       </div>
     </section>
 
-    <!-- Tattoos Section -->
     <section id="tattoos" class="tattoos">
       <h2>Tattoos</h2>
       <div class="gallery">
-        <div class="gallery-item">
+        <a href="#img1" class="gallery-item">
           <img src="img/12.jpg" alt="Tattoo 1" />
-        </div>
-        <div class="gallery-item">
+        </a>
+        <a href="#img2" class="gallery-item">
           <img src="img/13.jpg" alt="Tattoo 2" />
-        </div>
-        <div class="gallery-item">
+        </a>
+        <a href="#img3" class="gallery-item">
           <img src="img/14.jpg" alt="Tattoo 3" />
-        </div>
-        <div class="gallery-item">
+        </a>
+        <a href="#img4" class="gallery-item">
           <img src="img/15.jpg" alt="Tattoo 4" />
-        </div>
-        <div class="gallery-item">
+        </a>
+        <a href="#img5" class="gallery-item">
           <img src="img/16.jpg" alt="Tattoo 5" />
-        </div>
-        <div class="gallery-item">
+        </a>
+        <a href="#img6" class="gallery-item">
           <img src="img/17.jpg" alt="Tattoo 6" />
-        </div>
+        </a>
       </div>
     </section>
 
-    <!-- Sobre -->
     <section id="about" class="about">
       <div class="about-text">
         <h1>Hey there!</h1>
-
         <p>Welcome to my site.</p>
         <p>
           I’m Ramon Néfi, a tattoo artist specialized in Blackwork and Sketch,
@@ -81,14 +91,43 @@
       </div>
     </section>
 
-    <!-- Contato -->
     <section id="contact" class="contact">
       <h2>Contact</h2>
       <p>
         Message me on Instagram |
-        <a href="https://www.instagram.com/nefi.ink/" target="_blank" rel="noopener">@nefi.ink</a>
+        <a
+          href="https://www.instagram.com/nefi.ink/"
+          target="_blank"
+          rel="noopener"
+          >@nefi.ink</a
+        >
       </p>
     </section>
+
+    <div class="lightbox" id="img1">
+      <a href="#!" class="lightbox-close">&times;</a>
+      <img src="img/12.jpg" alt="Tattoo 1" />
+    </div>
+    <div class="lightbox" id="img2">
+      <a href="#!" class="lightbox-close">&times;</a>
+      <img src="img/13.jpg" alt="Tattoo 2" />
+    </div>
+    <div class="lightbox" id="img3">
+      <a href="#!" class="lightbox-close">&times;</a>
+      <img src="img/14.jpg" alt="Tattoo 3" />
+    </div>
+    <div class="lightbox" id="img4">
+      <a href="#!" class="lightbox-close">&times;</a>
+      <img src="img/15.jpg" alt="Tattoo 4" />
+    </div>
+    <div class="lightbox" id="img5">
+      <a href="#!" class="lightbox-close">&times;</a>
+      <img src="img/16.jpg" alt="Tattoo 5" />
+    </div>
+    <div class="lightbox" id="img6">
+      <a href="#!" class="lightbox-close">&times;</a>
+      <img src="img/17.jpg" alt="Tattoo 6" />
+    </div>
 
     <footer>
       <p>
@@ -96,7 +135,5 @@
         <a href="https://github.com/gustavoareis" target="_blank">Github</a>
       </p>
     </footer>
-
-    <script src="js/script.js"></script>
   </body>
 </html>
