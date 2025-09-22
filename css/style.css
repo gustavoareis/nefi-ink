@@ -1,199 +1,419 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Poppins", "Helvetica Neue", Arial, sans-serif;
-  background: #111111;
-  line-height: 1.6;
-  color: #fff;
-}
-
-@font-face {
-  font-family: "Cloister Black";
-  src: url("../fonts/CloisterBlack.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-a {
-  color: inherit;
-}
-
-.navbar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem 2rem;
-}
-
-.nav-links ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  margin-top: 1rem;
-}
-
-.nav-links ul li a {
-  text-decoration: none;
-  font-size: 1rem;
-  position: relative;
-  padding-bottom: 3px;
-}
-
-/* underline animado */
-.nav-links ul li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 2px;
-  background: #ffffff;
-  transition: width 0.3s ease;
-}
-
-.nav-links ul li a:hover::after {
-  width: 100%;
-}
-
-/* hero com Parallax */
-.parallax {
-  background: url("../img/1_newbw.jpg") no-repeat center center/cover;
-  height: 100vh;
-  background-attachment: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  font-family: "Cloister Black", "Poppins", "Helvetica Neue", Arial, sans-serif;
-  font-weight: normal;
-  font-size: 60px;
-  color: rgb(255, 255, 255);
-}
-
-.btn {
-  padding: 0.8rem 1.5rem;
-  background: #111111;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background: #252525;
-}
-
-section {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.tattoos h2 {
-  padding: 2rem 0;
-  letter-spacing: 1px;
-  font-size: 2rem;
-}
-
-.about {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  padding: 4rem 2rem;
-  flex-wrap: wrap;
-  text-align: left;
-}
-
-.about-text {
-  flex: 1;
-  max-width: 500px;
-}
-
-.about-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.3rem;
-}
-
-.about-text p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
-.about-image {
-  flex: 1;
-  max-width: 500px;
-}
-
-.about-image img {
-  width: 100%;
-  border-radius: 6px;
-}
-
-.contact h2 {
-  padding: 0.75rem 0;
-  letter-spacing: 1px;
-  font-size: 2rem;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  transition: gap 0.25s ease;
-}
-
-@media (max-width: 900px) {
+/* ==========================================================================
+   1. Configurações Globais e Base (Mobile-First)
+   ========================================================================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    /* Facilita o cálculo com rem (1rem = 10px) */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: "Poppins", "Helvetica Neue", Arial, sans-serif;
+    background: #111111;
+    line-height: 1.6;
+    color: #fff;
+    /* Tamanho de fonte base (equivale a 16px) */
+    font-size: 1.6rem;
+  }
+  
+  @font-face {
+    font-family: "Cloister Black";
+    src: url("../fonts/CloisterBlack.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  section {
+    padding: 6rem 2rem;
+    text-align: center;
+  }
+  
+  h2 {
+    letter-spacing: 1px;
+    font-size: 2.8rem; /* Tamanho base para celular */
+  }
+  
+  /* ==========================================================================
+     2. Estilos dos Componentes (Mobile-First)
+     ========================================================================== */
+  
+  /* --- Navbar --- */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem; /* Padding horizontal */
+    min-height: 8rem; /* Garante altura mínima para o header */
+  }
+  
+  /* --- Logo --- */
+  .logo {
+    position: absolute;
+    top: 2.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3001; 
+  }
+  
+  .logo img {
+    height: 3.5rem; 
+    width: auto;
+    display: block;
+  }
+  
+  /* --- Hero com Parallax --- */
+  .parallax {
+    background: url("../img/1_newbw.jpg") no-repeat center center/cover;
+    height: 100vh;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-family: "Cloister Black", "Poppins", sans-serif;
+    font-weight: normal;
+    font-size: 4.5rem; /* Tamanho para celular */
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .btn {
+    padding: 1rem 1.8rem;
+    background: #111111;
+    border-radius: 4px;
+    transition: background 0.3s;
+    font-size: 1.6rem;
+  }
+  
+  .btn:hover {
+    background: #252525;
+  }
+  
+  /* --- Seção Tattoos / Galeria --- */
+  .tattoos h2 {
+    padding-bottom: 2rem;
+  }
+  
   .gallery {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    transition: gap 0.25s ease;
   }
-}
-
-@media (max-width: 600px) {
-  .gallery {
-    grid-template-columns: 1fr;
+  
+  .gallery-item img {
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    will-change: transform, filter;
   }
-}
-
-.gallery-item img {
-  width: 100%;
-  display: block;
-  border-radius: 6px;
-  transition: transform 0.3s ease, filter 0.3s ease;
-  will-change: transform, filter;
-}
-
-.gallery:hover .gallery-item img {
-  transform: none;
-  filter: blur(3px) brightness(0.8);
-}
-
-.gallery .gallery-item {
-  position: relative;
-}
-
-.gallery:hover .gallery-item:hover img {
-  transform: scale(1.15);
-  position: relative;
-  z-index: 3;
-  filter: none;
-}
-
-.gallery:hover {
-  gap: 0;
-}
-
-footer {
-  text-align: center;
-  padding: 1.5rem;
-  font-size: 0.9rem;
-  border-top: 1px solid #222;
-}
+  
+  .gallery:hover .gallery-item img {
+    transform: none;
+    filter: blur(3px) brightness(0.8);
+  }
+  
+  .gallery .gallery-item {
+    position: relative;
+  }
+  
+  .gallery:hover .gallery-item:hover img {
+    transform: scale(1.15);
+    position: relative;
+    z-index: 3;
+    filter: none;
+  }
+  
+  .gallery:hover {
+    gap: 0;
+  }
+  
+  /* --- Seção Sobre --- */
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    text-align: center;
+  }
+  
+  .about-text,
+  .about-image {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .about-text h1 {
+    font-size: 3rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .about-text p {
+    margin-bottom: 1rem;
+  }
+  
+  .about-image img {
+    width: 100%;
+    border-radius: 6px;
+  }
+  
+  /* --- Seção Contato --- */
+  .contact h2 {
+    padding-bottom: 1.5rem;
+  }
+  
+  /* --- Footer --- */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.4rem;
+    border-top: 1px solid #222;
+  }
+  
+  /* --- Lightbox (CSS Puro) --- */
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+  }
+  
+  .lightbox:target {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 4px;
+  }
+  
+  .lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 3rem;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* ==========================================================================
+     3. Media Queries - Ajustes para Telas Maiores
+     ========================================================================== */
+  
+  @media (min-width: 30em) { /* 480px */
+    .gallery {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (min-width: 56.25em) { /* 900px */
+    html {
+      scroll-padding-top: 80px;
+    }
+  
+    .navbar {
+      justify-content: space-between; 
+    }
+  
+    .logo {
+      position: static; 
+      transform: none; 
+    }
+  
+    .logo img {
+      height: 4rem; 
+    }
+  
+    h2 {
+      font-size: 3.2rem;
+    }
+  
+    .hero-content h1 {
+      font-size: 6rem;
+    }
+    
+    .about {
+      flex-direction: row;
+      text-align: left;
+      gap: 5rem;
+      align-items: center;
+    }
+    
+    .about-text,
+    .about-image {
+      flex: 1;
+      width: auto;
+    }
+  
+    .about-text h1 {
+      font-size: 4rem;
+    }
+  }
+  
+  /* ==========================================================================
+     4. Correções Específicas
+     ========================================================================== */
+  
+  @media (max-width: 48em) { /* 768px */
+    .parallax {
+      background-attachment: scroll;
+    }
+  }
+  
+  /* ==========================================================================
+     5. Estilos do Menu Sanduíche (Mobile-First)
+     ========================================================================== */
+  
+  .menu-toggle {
+    display: none;
+  }
+  
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    position: absolute;
+    top: 2.5rem;
+    left: 2rem;
+    z-index: 3001;
+  }
+  
+  .hamburger-menu span {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #1a1a1a;
+    padding-top: 8rem;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 3000;
+    border-right: 1px solid #222;
+  }
+  
+  .nav-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  .nav-links ul li a {
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 3px;
+  }
+  
+  .nav-links ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #ffffff;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-links ul li a:hover::after {
+    width: 100%;
+  }
+  
+  .menu-toggle:checked ~ .nav-links {
+    transform: translateX(0);
+  }
+  
+  .menu-toggle:checked ~ .hamburger-menu span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+  .menu-toggle:checked ~ .hamburger-menu span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle:checked ~ .hamburger-menu span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+  
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2999;
+  }
+  
+  .menu-toggle:checked ~ .overlay {
+    display: block;
+  }
+  
+  /* ==========================================================================
+     6. Reset do Menu para Telas Maiores (Desktop)
+     ========================================================================== */
+  @media (min-width: 56.25em) { /* 900px */
+    .hamburger-menu, .menu-toggle, .overlay {
+      display: none;
+    }
+  
+    .nav-links {
+      position: static;
+      width: auto;
+      height: auto;
+      background-color: transparent;
+      padding-top: 0;
+      transform: translateX(0);
+      border: none;
+    }
+    
+    .nav-links ul {
+      flex-direction: row;
+      margin-top: 0;
+      gap: 2rem;
+    }
+  
+    .nav-links ul li a {
+      font-size: 1.6rem;
+    }
+  }
