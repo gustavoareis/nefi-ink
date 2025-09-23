@@ -1,4 +1,4 @@
-* {
+﻿* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -53,8 +53,8 @@ h2 {
 .logo {
   position: absolute;
   top: 2.2rem;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 4rem;
+  transform: none;
   z-index: 3001;
 }
 
@@ -400,8 +400,8 @@ footer {
   .logo {
     position: absolute;
     top: 50%;
-    right: 2rem;
-    left: auto;
+    left: 4rem;
+    right: auto;
     transform: translateY(-50%);
   }
 
@@ -409,3 +409,4 @@ footer {
     font-size: 1.6rem;
   }
 }
+
