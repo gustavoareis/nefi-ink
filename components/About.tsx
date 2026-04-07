@@ -5,9 +5,9 @@ import Image from 'next/image'
 import { motion, useInView } from 'framer-motion'
 
 const stats = [
-  { value: '8+',   label: 'Anos de\nExperiência' },
-  { value: '500+', label: 'Projetos\nRealizados'  },
-  { value: '01',   label: 'Estilo\nInconfundível' },
+  { value: '8+',   label: 'Years of\nExperience' },
+  { value: '500+', label: 'Projects\nCompleted'  },
+  { value: '01',   label: 'Unique\nStyle' },
 ]
 
 export default function About() {
@@ -15,7 +15,7 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section id="sobre" className="relative py-28 md:py-40 px-6 md:px-12 overflow-hidden">
+    <section id="about" className="relative py-28 md:py-40 px-6 md:px-12 overflow-hidden">
 
       {/* Diagonal cross-hatch background texture */}
       <div
@@ -66,8 +66,8 @@ export default function About() {
             {/* Image */}
             <div className="relative overflow-hidden" style={{ aspectRatio: '16 / 11' }}>
               <Image
-                src="/image2.jpeg"
-                alt="Ramon Néfi — Artista Tatuador"
+                src="/images/profile/image2.jpeg"
+                alt="Ramon Néfi — Tattoo Artist"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
@@ -77,7 +77,7 @@ export default function About() {
             </div>
 
             <p className="mt-3 font-mono text-[9px] text-[#4a4540] tracking-[0.3em] uppercase text-center">
-              Ramon Néfi — Artista Tatuador
+              Ramon Néfi — Tattoo Artist
             </p>
           </motion.div>
 
@@ -97,33 +97,32 @@ export default function About() {
                 className="w-8 h-px bg-[#c41e1e] origin-left"
               />
               <span className="font-mono text-[9px] text-[#c41e1e] uppercase tracking-[0.35em]">
-                Sobre o Artista
+                About the Artist
               </span>
             </div>
 
             {/* Heading */}
             <h2 className="font-display text-4xl md:text-5xl text-[#e8e0d0] leading-tight mb-8">
-              Arte que vive
+              Art that lives
               <br />
-              <em className="text-[#c41e1e] font-display not-italic">na pele</em>
+              <em className="text-[#c41e1e] font-display not-italic">on skin</em>
             </h2>
 
             {/* Body */}
             <div className="space-y-5 font-serif text-lg text-[#7a7060] leading-relaxed">
               <p>
-                Ramon Néfi é tatuador especializado em{' '}
-                <span className="text-[#e8e0d0] italic">anime, manga e blackwork japonês</span>.
-                Com traços precisos e profunda sensibilidade narrativa, cada peça é uma obra
-                singular — criada para durar toda uma vida.
+                Ramon Néfi is a tattoo artist specialized in{' '}
+                <span className="text-[#e8e0d0] italic">anime, manga and Japanese blackwork</span>.
+                With precise strokes and deep narrative sensitivity, each piece is a unique work — created to last a lifetime.
               </p>
               <p>
-                Influenciado pela estética dos mangás e pela tradição do{' '}
-                <span className="text-[#e8e0d0] italic">tebori</span> japonês, seu trabalho
-                transita entre o delicado e o intenso, com identidade inconfundível.
+                Influenced by manga aesthetics and the Japanese{' '}
+                <span className="text-[#e8e0d0] italic">tebori</span> tradition, his work
+                transitions between delicate and intense, with an unmistakable identity.
               </p>
               <p>
-                Do conceito ao traço final, cada projeto nasce de uma colaboração honesta com
-                o cliente — garantindo que a arte reflita quem você é.
+                From concept to final stroke, each project is born from honest collaboration with
+                the client — ensuring that the art reflects who you are.
               </p>
             </div>
 

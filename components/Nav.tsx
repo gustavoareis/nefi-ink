@@ -3,9 +3,9 @@
 import { useEffect, useState } from 'react'
 
 const links = [
-  { label: 'Sobre',     href: '#sobre'     },
-  { label: 'Portfólio', href: '#portfolio'  },
-  { label: 'Contato',   href: '#contato'   },
+  { label: 'About',     href: '#about'     },
+  { label: 'Portfolio', href: '#portfolio'  },
+  { label: 'Contact',   href: '#contact'   },
 ]
 
 export default function Nav() {
@@ -47,10 +47,10 @@ export default function Nav() {
             </a>
           ))}
           <a
-            href="#contato"
+            href="#contact"
             className="font-mono text-[10px] px-5 py-2.5 border border-[#c41e1e] text-[#c41e1e] hover:bg-[#c41e1e] hover:text-[#e8e0d0] transition-all duration-300 uppercase tracking-[0.25em]"
           >
-            Agende
+            Book
           </a>
         </div>
 
@@ -90,11 +90,11 @@ export default function Nav() {
             </a>
           ))}
           <a
-            href="#contato"
+            href="#contact"
             onClick={() => setMenuOpen(false)}
             className="font-mono text-xs px-5 py-3 border border-[#c41e1e] text-[#c41e1e] text-center uppercase tracking-[0.25em]"
           >
-            Agende sua sessão
+            Book your session
           </a>
         </div>
       </div>

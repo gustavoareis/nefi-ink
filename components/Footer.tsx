@@ -11,7 +11,7 @@ export default function Footer() {
             nefi<span className="text-[#c41e1e]">.</span>ink
           </span>
           <p className="font-mono text-[9px] text-[#4a4540] mt-1 uppercase tracking-[0.3em]">
-            Arte · Pele · Identidade
+            Art · Skin · Identity
           </p>
         </div>
 

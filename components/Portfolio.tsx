@@ -5,11 +5,11 @@ import Image from 'next/image'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 
 const TATTOOS = [
-  '/tattoo/12.jpg', '/tattoo/13.jpg', '/tattoo/14.jpg',
-  '/tattoo/15.jpg', '/tattoo/16.jpg', '/tattoo/17.jpg',
-  '/tattoo/18.png', '/tattoo/19.png', '/tattoo/20.png',
-  '/tattoo/21.jpg', '/tattoo/22.jpg', '/tattoo/23.jpg',
-  '/tattoo/24.jpg', '/tattoo/25.jpg', '/tattoo/26.jpg',
+  '/images/tattoos/12.jpg', '/images/tattoos/13.jpg', '/images/tattoos/14.jpg',
+  '/images/tattoos/15.jpg', '/images/tattoos/16.jpg', '/images/tattoos/17.jpg',
+  '/images/tattoos/18.png', '/images/tattoos/19.png', '/images/tattoos/20.png',
+  '/images/tattoos/21.jpg', '/images/tattoos/22.jpg', '/images/tattoos/23.jpg',
+  '/images/tattoos/24.jpg', '/images/tattoos/25.jpg', '/images/tattoos/26.jpg',
 ]
 
 /* ── Single portfolio card ─────────────────────────────────── */
@@ -36,7 +36,7 @@ function TattooCard({
     >
       <Image
         src={src}
-        alt={`Tatuagem ${index + 1} por Ramon Néfi`}
+        alt={`Tattoo ${index + 1} by Ramon Néfi`}
         width={600}
         height={800}
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -186,7 +186,7 @@ export default function Portfolio() {
           className="text-center mb-20"
         >
           <span className="font-mono text-[9px] text-[#c41e1e] uppercase tracking-[0.4em]">
-            Trabalhos
+            Works
           </span>
           <h2 className="font-display text-5xl md:text-6xl text-[#e8e0d0] mt-3 leading-tight">
             Portfólio
@@ -198,7 +198,7 @@ export default function Portfolio() {
             className="w-14 h-px bg-[#c41e1e] mx-auto mt-5 origin-left"
           />
           <p className="font-serif italic text-lg text-[#4a4540] mt-4">
-            Cada traço, uma história permanente
+            Every stroke, a permanent story
           </p>
         </motion.div>
 

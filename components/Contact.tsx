@@ -28,7 +28,7 @@ export default function Contact() {
   const isInView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section id="contato" className="relative py-28 md:py-40 px-6 overflow-hidden">
+    <section id="contact" className="relative py-28 md:py-40 px-6 overflow-hidden">
 
       {/* Ghost "INK" watermark */}
       <div
@@ -56,7 +56,7 @@ export default function Contact() {
           className="flex items-center justify-center gap-4 mb-8"
         >
           <div className="w-10 h-px bg-[#c41e1e]" />
-          <span className="font-mono text-[9px] text-[#c41e1e] uppercase tracking-[0.4em]">Contato</span>
+          <span className="font-mono text-[9px] text-[#c41e1e] uppercase tracking-[0.4em]">Contact</span>
           <div className="w-10 h-px bg-[#c41e1e]" />
         </motion.div>
 
@@ -68,9 +68,9 @@ export default function Contact() {
           className="font-display leading-tight text-[#e8e0d0]"
           style={{ fontSize: 'clamp(2.8rem, 8vw, 5.5rem)' }}
         >
-          Agende sua
+          Book your
           <br />
-          <span className="text-[#c41e1e]">sessão</span>
+          <span className="text-[#c41e1e]">session</span>
         </motion.h2>
 
         {/* Subtext */}
@@ -80,8 +80,8 @@ export default function Contact() {
           transition={{ duration: 0.9, delay: 0.3 }}
           className="font-serif italic text-xl text-[#7a7060] mt-6 mb-14 max-w-lg mx-auto leading-relaxed"
         >
-          Cada tatuagem começa com uma conversa. Fale comigo sobre sua ideia
-          e vamos criar algo único juntos.
+          Every tattoo starts with a conversation. Tell me about your idea
+          and let's create something unique together.
         </motion.p>
 
         {/* CTA buttons */}
@@ -124,7 +124,7 @@ export default function Contact() {
           transition={{ duration: 0.8, delay: 0.65 }}
           className="mt-14 font-mono text-[9px] text-[#4a4540] uppercase tracking-[0.25em]"
         >
-          Atendimento com hora marcada · Resposta em até 24h
+          By appointment only · Response within 24h
         </motion.p>
       </div>
     </section>

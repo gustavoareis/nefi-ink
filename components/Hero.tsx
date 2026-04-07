@@ -59,7 +59,7 @@ export default function Hero() {
           y: bgY,
           position: 'absolute',
           inset: '-20%',
-          backgroundImage: 'url(/image1.jpg)',
+          backgroundImage: 'url(/images/profile/image1.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           filter: 'brightness(0.28) contrast(1.15)',
@@ -104,7 +104,7 @@ export default function Hero() {
           transition={{ duration: 2, delay: 0.3 }}
           className="font-mono text-[10px] text-[#c41e1e] uppercase tracking-[0.4em] mb-10"
         >
-          Estúdio de Tatuagem
+          Tattoo Studio
         </motion.p>
 
         <motion.h1
@@ -154,7 +154,7 @@ export default function Hero() {
       <div className="absolute left-7 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-3">
         <div className="w-px h-12 bg-gradient-to-b from-transparent to-[#c41e1e]" />
         <p className="vertical-text font-mono text-[9px] text-[#4a4540] uppercase tracking-[0.3em]">
-          Arte · Pele · Identidade
+          Art · Skin · Identity
         </p>
         <div className="w-px h-12 bg-gradient-to-t from-transparent to-[#c41e1e]" />
       </div>
