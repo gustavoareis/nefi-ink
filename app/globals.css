@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Design Tokens ─────────────────────────────────────────── */
+:root {
+  --black:   #080808;
+  --surface: #111111;
+  --lift:    #161616;
+  --text:    #e8e0d0;
+  --muted:   #7a7060;
+  --subtle:  #4a4540;
+  --red:     #c41e1e;
+  --red-dim: #7a1212;
+  --gold:    #b8960c;
+  --border:  #1a1a1a;
+}
+
+/* ─── Base ───────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--text);
+  font-family: var(--font-cormorant), Georgia, serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Film grain overlay ─────────────────────────────────────── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)' opacity='0.1'/%3E%3C/svg%3E");
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 9998;
+  mix-blend-mode: overlay;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 3px; }
+::-webkit-scrollbar-track  { background: var(--black); }
+::-webkit-scrollbar-thumb  { background: var(--red); border-radius: 0; }
+
+/* ─── Selection ─────────────────────────────────────────────── */
+::selection {
+  background: var(--red);
+  color: var(--text);
+}
+
+/* ─── Custom cursor ─────────────────────────────────────────── */
+body { cursor: crosshair; }
+a, button { cursor: crosshair; }
+
+/* ─── Section divider ───────────────────────────────────────── */
+.ink-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+}
+.ink-divider::before,
+.ink-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border));
+}
+.ink-divider::after {
+  background: linear-gradient(to left, transparent, var(--border));
+}
+
+/* ─── Masonry ────────────────────────────────────────────────── */
+.masonry {
+  columns: 1;
+  column-gap: 0.75rem;
+}
+@media (min-width: 640px)  { .masonry { columns: 2; } }
+@media (min-width: 1024px) { .masonry { columns: 3; } }
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+/* ─── Hero parallax ─────────────────────────────────────────── */
+.parallax-bg {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+  .parallax-bg {
+    background-attachment: scroll;
+  }
+}
+
+/* ─── Ink line animation ─────────────────────────────────────── */
+@keyframes inkDraw {
+  from { transform: scaleX(0); transform-origin: left; }
+  to   { transform: scaleX(1); transform-origin: left; }
+}
+.ink-line { animation: inkDraw 0.8s ease forwards; }
+
+/* ─── Vertical text ─────────────────────────────────────────── */
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+/* ─── Lightbox ───────────────────────────────────────────────── */
+.lightbox-open { overflow: hidden; }
