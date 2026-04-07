@@ -4,12 +4,13 @@ import { useRef, useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 
+const BASE = process.env.__NEXT_ROUTER_BASEPATH ?? ''
 const TATTOOS = [
-  '/images/tattoos/12.jpg', '/images/tattoos/13.jpg', '/images/tattoos/14.jpg',
-  '/images/tattoos/15.jpg', '/images/tattoos/16.jpg', '/images/tattoos/17.jpg',
-  '/images/tattoos/18.png', '/images/tattoos/19.png', '/images/tattoos/20.png',
-  '/images/tattoos/21.jpg', '/images/tattoos/22.jpg', '/images/tattoos/23.jpg',
-  '/images/tattoos/24.jpg', '/images/tattoos/25.jpg', '/images/tattoos/26.jpg',
+  `${BASE}/images/tattoos/12.jpg`, `${BASE}/images/tattoos/13.jpg`, `${BASE}/images/tattoos/14.jpg`,
+  `${BASE}/images/tattoos/15.jpg`, `${BASE}/images/tattoos/16.jpg`, `${BASE}/images/tattoos/17.jpg`,
+  `${BASE}/images/tattoos/18.png`, `${BASE}/images/tattoos/19.png`, `${BASE}/images/tattoos/20.png`,
+  `${BASE}/images/tattoos/21.jpg`, `${BASE}/images/tattoos/22.jpg`, `${BASE}/images/tattoos/23.jpg`,
+  `${BASE}/images/tattoos/24.jpg`, `${BASE}/images/tattoos/25.jpg`, `${BASE}/images/tattoos/26.jpg`,
 ]
 
 /* ── Single portfolio card ─────────────────────────────────── */
