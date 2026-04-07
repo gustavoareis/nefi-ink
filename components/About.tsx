@@ -66,7 +66,7 @@ export default function About() {
             {/* Image */}
             <div className="relative overflow-hidden" style={{ aspectRatio: '16 / 11' }}>
               <Image
-                src="/images/profile/image2.jpeg"
+                src={`${process.env.__NEXT_ROUTER_BASEPATH ?? ''}/images/profile/image2.jpeg`}
                 alt="Ramon Néfi — Tattoo Artist"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
