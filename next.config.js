@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  basePath: '/nefi-ink',
   images: {
     unoptimized: true,
-    formats: ['image/avif', 'image/webp'],
   },
 }
 
