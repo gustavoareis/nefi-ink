@@ -52,7 +52,7 @@ function TattooCard({
       {/* View label */}
       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <span className="font-mono text-[10px] tracking-[0.3em] text-[#e8e0d0] uppercase border border-[#e8e0d0]/60 px-4 py-2">
-          Ampliar
+          View
         </span>
       </div>
 
@@ -121,7 +121,7 @@ function Lightbox({
 
         <Image
           src={images[index]}
-          alt={`Tatuagem ${index + 1}`}
+          alt={`Tattoo ${index + 1}`}
           width={800}
           height={900}
           style={{ width: '100%', height: 'auto', maxHeight: '85vh', objectFit: 'contain' }}
@@ -139,21 +139,21 @@ function Lightbox({
         className="absolute top-6 right-8 font-mono text-xs text-[#7a7060] hover:text-[#c41e1e] transition-colors tracking-widest uppercase"
         onClick={onClose}
       >
-        ✕ Fechar
+        ✕ Close
       </button>
 
       {/* Prev / Next */}
       <button
         className="absolute left-4 md:left-10 top-1/2 -translate-y-1/2 p-4 text-[#7a7060] hover:text-[#c41e1e] transition-colors font-display text-2xl"
         onClick={(e) => { e.stopPropagation(); onPrev() }}
-        aria-label="Anterior"
+        aria-label="Previous"
       >
         ‹
       </button>
       <button
         className="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 p-4 text-[#7a7060] hover:text-[#c41e1e] transition-colors font-display text-2xl"
         onClick={(e) => { e.stopPropagation(); onNext() }}
-        aria-label="Próximo"
+        aria-label="Next"
       >
         ›
       </button>
@@ -190,7 +190,7 @@ export default function Portfolio() {
             Works
           </span>
           <h2 className="font-display text-5xl md:text-6xl text-[#e8e0d0] mt-3 leading-tight">
-            Portfólio
+            Portfolio
           </h2>
           <motion.div
             initial={{ scaleX: 0 }}
