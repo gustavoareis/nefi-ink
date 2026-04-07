@@ -59,7 +59,7 @@ export default function Hero() {
           y: bgY,
           position: 'absolute',
           inset: '-20%',
-          backgroundImage: 'url(/images/profile/image1.jpg)',
+          backgroundImage: `url(${process.env.__NEXT_ROUTER_BASEPATH ?? ''}/images/profile/image1.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           filter: 'brightness(0.28) contrast(1.15)',
