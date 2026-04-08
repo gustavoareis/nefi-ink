@@ -112,13 +112,11 @@ export default function About() {
             <div className="space-y-5 font-serif text-lg text-[#7a7060] leading-relaxed">
               <p>
                 Ramon Néfi is a tattoo artist specialized in{' '}
-                <span className="text-[#e8e0d0] italic">anime, manga and Japanese blackwork</span>.
+                <span className="text-[#e8e0d0] italic">Blackwork and Sketch</span>.
                 With precise strokes and deep narrative sensitivity, each piece is a unique work — created to last a lifetime.
               </p>
               <p>
-                Influenced by manga aesthetics and the Japanese{' '}
-                <span className="text-[#e8e0d0] italic">tebori</span> tradition, his work
-                transitions between delicate and intense, with an unmistakable identity.
+                His work transitions between delicate and intense, blending raw sketch energy with bold blackwork technique — always with an unmistakable identity.
               </p>
               <p>
                 From concept to final stroke, each project is born from honest collaboration with

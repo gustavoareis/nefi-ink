@@ -25,10 +25,10 @@ const spaceMono = Space_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Nefi.ink — Ramon Néfi | Anime & Blackwork Tattoo',
+  title: 'Nefi.ink — Ramon Néfi | Blackwork & Sketch Tattoo',
   description:
-    'Tattoo studio specialized in anime, manga and Japanese blackwork art by Ramon Néfi.',
-  keywords: 'tattoo, anime, manga, blackwork, japanese, nefi.ink, ramon nefi',
+    'Tattoo studio specialized in Blackwork and Sketch art by Ramon Néfi.',
+  keywords: 'tattoo, blackwork, sketch, nefi.ink, ramon nefi',
   openGraph: {
     title: 'Nefi.ink — Ramon Néfi',
     description: 'Art that lives on skin.',

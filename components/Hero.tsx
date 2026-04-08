@@ -142,11 +142,9 @@ export default function Hero() {
           transition={{ duration: 1, delay: 1.8 }}
           className="flex items-center gap-5 mt-6 font-mono text-[10px] uppercase tracking-[0.3em] text-[#e8e0d0]"
         >
-          <span>Anime</span>
-          <span className="text-[#c41e1e] text-base">×</span>
-          <span>Manga</span>
-          <span className="text-[#c41e1e] text-base">×</span>
           <span>Blackwork</span>
+          <span className="text-[#c41e1e] text-base">×</span>
+          <span>Sketch</span>
         </motion.div>
       </div>
 
